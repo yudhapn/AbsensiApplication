@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "289617576775",
+    "firebase_url": "https://absensi-app-3449e.firebaseio.com",
+    "project_id": "absensi-app-3449e",
+    "storage_bucket": "absensi-app-3449e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289617576775:android:dba47f233f587212",
+        "android_client_info": {
+          "package_name": "com.pertamina.absensiapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "289617576775-um1d3b945d69395jalre18otp9654gca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWn_hpGOGXAuzRcYhQ2ZufLXkMf-dQhT0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "289617576775-um1d3b945d69395jalre18otp9654gca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,34 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/leelawad</item>
+        <item name="android:textStyle">bold</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light"/>
+    <style name="MaterialCardView.Rounded" parent="Widget.MaterialComponents.CardView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">28dp</item>
+    </style>
+    <style name="MaterialCardView.TopRounded" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/colorWhite</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeTopRight">28dp</item>
+        <item name="cornerSizeTopLeft">28dp</item>
+    </style>
+    <style name="BottomNavigationView"
+           parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/leelawad</item>
+    </style>
+    <style name="SplashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar"/>
+</resources>
+

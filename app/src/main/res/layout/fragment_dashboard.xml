@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.pertamina.absensiapplication.model.User" />
+
+        <variable
+            name="counter"
+            type="com.pertamina.absensiapplication.model.Counter" />
+
+        <variable
+            name="leaveBalance"
+            type="Integer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F1EFF1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/dashboard_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/root_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                tools:context=".view.DashboardFragment">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/dashboard_appbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F1EFF1"
+                    app:elevation="0dp"
+                    app:toolbarId="@+id/toolbar">
+
+                    <com.google.android.material.appbar.CollapsingToolbarLayout
+                        android:id="@+id/dashboard_collaps_toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fitsSystemWindows="true"
+                        app:contentScrim="#F1EFF1"
+                        app:expandedTitleGravity="top"
+                        app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/top_card"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/card_bottom_radius_28"
+                                android:elevation="8dp"
+                                android:padding="20dp"
+                                android:paddingTop="15dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:id="@+id/greeting1_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/leelawdb"
+                                    android:text="@{!user.name.empty ? `Hi, ` + user.name.substring(0, user.name.indexOf(' ')) : `Hai, `}"
+                                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:fontFamily="@font/leelawad"
+                                    android:text="@string/enjoy_your_day"
+                                    android:textSize="12sp"
+                                    app:layout_constraintStart_toStartOf="@+id/greeting1_text"
+                                    app:layout_constraintTop_toBottomOf="@+id/greeting1_text" />
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="75dp"
+                                    android:layout_height="95dp"
+                                    android:layout_marginEnd="8dp"
+                                    app:cardCornerRadius="5dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:contentDescription="@string/user_image"
+                                        android:scaleType="centerCrop"
+                                        app:imageUrl="@{user.profileImage}"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </com.google.android.material.card.MaterialCardView>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:background="@drawable/card_all_radius_28"
+                                android:elevation="8dp"
+                                android:padding="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/bottom_card"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/top_card">
+
+                                <TextView
+                                    android:id="@+id/balance_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/leelawdb"
+                                    android:text="@string/sisa_saldo"
+                                    android:textColor="#A4A4A4"
+                                    android:textSize="15sp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/value_balance_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/leelawdb"
+                                    android:text="@{leaveBalance + ` HK`}"
+                                    android:textColor="#E12E46"
+                                    android:textSize="35sp"
+                                    app:layout_constraintStart_toStartOf="@+id/balance_text"
+                                    app:layout_constraintTop_toBottomOf="@+id/balance_text"
+                                    tools:text="12 HK" />
+
+                                <TextView
+                                    android:id="@+id/position_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="@font/leelawdb"
+                                    android:text="@string/posisi"
+                                    android:textColor="#A4A4A4"
+                                    android:textSize="15sp"
+                                    app:layout_constraintStart_toStartOf="@+id/value_balance_text"
+                                    app:layout_constraintTop_toBottomOf="@+id/value_balance_text" />
+
+                                <TextView
+                                    android:id="@+id/value_position_text"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="@font/leelawdb"
+                                    android:text="@{user.position}"
+                                    android:textSize="15sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/value_date_text"
+                                    app:layout_constraintStart_toStartOf="@+id/position_text"
+                                    app:layout_constraintTop_toBottomOf="@+id/position_text"
+                                    tools:text="Operation Head" />
+
+                                <TextView
+                                    android:id="@+id/date_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/leelawdb"
+                                    android:text="@string/tanggal"
+                                    android:textColor="#A4A4A4"
+                                    android:textSize="15sp"
+                                    app:layout_constraintStart_toStartOf="@+id/value_date_text"
+                                    app:layout_constraintTop_toTopOf="@+id/position_text" />
+
+                                <TextView
+                                    android:id="@+id/value_date_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/leelawdb"
+                                    android:text="@string/june_19_2019"
+                                    android:textSize="15sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/value_position_text" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F1EFF1"
+                    android:fillViewport="true"
+                    android:fitsSystemWindows="true"
+                    android:orientation="vertical"
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/bottom_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/card_top_radius_28"
+                        android:elevation="10dp"
+                        android:paddingStart="18dp"
+                        android:paddingTop="18dp"
+                        android:paddingEnd="18dp">
+
+                        <TextView
+                            android:id="@+id/your_permit_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/leelawdb"
+                            android:text="@string/surat_izin_kamu"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/process_card"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/ripple_card_all_round_green"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:paddingStart="10dp"
+                            android:paddingTop="22dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="22dp"
+                            app:layout_constraintEnd_toStartOf="@id/finish_card"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/finish_card">
+
+                            <TextView
+                                android:id="@+id/permit_process_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:fontFamily="@font/leelawdb"
+                                android:text="@string/diproses"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/value_permit_process_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/leelawdb"
+                                android:text="@{(counter != null )? counter.counterRequest+`` : `0`}"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="20sp"
+                                app:layout_constraintStart_toStartOf="@id/permit_process_text"
+                                app:layout_constraintTop_toBottomOf="@id/permit_process_text" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/finish_card"
+                            android:layout_width="120dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/ripple_card_all_round_blue"
+                            android:paddingStart="10dp"
+                            android:paddingTop="22dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="22dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/your_permit_text">
+
+                            <TextView
+                                android:id="@+id/permit_approve_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:fontFamily="@font/leelawdb"
+                                android:text="@string/selesai"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/value_permit_approve_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/leelawdb"
+                                android:text="@{(counter != null )? counter.counterComplete+`` : `0`}"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="20sp"
+                                app:layout_constraintStart_toStartOf="@id/permit_approve_text"
+                                app:layout_constraintTop_toBottomOf="@id/permit_approve_text" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/confirm_card"
+                            android:layout_width="0dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/ripple_card_all_round_red"
+                            android:paddingStart="10dp"
+                            android:paddingTop="22dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="22dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/finish_card"
+                            app:layout_constraintTop_toTopOf="@id/finish_card"
+                            app:setVisibility="@{user}">
+
+                            <TextView
+                                android:id="@+id/permit_confirm_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:fontFamily="@font/leelawdb"
+                                android:text="@string/konfirmasi"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/value_permit_confirm_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/leelawdb"
+                                android:text="@{(counter != null )? counter.counterConfirm+`` : `0`}"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="20sp"
+                                app:layout_constraintStart_toStartOf="@id/permit_confirm_text"
+                                app:layout_constraintTop_toBottomOf="@id/permit_confirm_text" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <ImageView
+                            android:id="@+id/up_arrow_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="18dp"
+                            android:contentDescription="@string/image_arrow"
+                            android:src="@drawable/ic_arrow_up_black_24dp"
+                            app:layout_constraintEnd_toEndOf="@id/finish_card"
+                            app:layout_constraintStart_toStartOf="@id/finish_card"
+                            app:layout_constraintTop_toBottomOf="@id/finish_card" />
+
+                        <TextView
+                            android:id="@+id/head_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/leelawdb"
+                            android:text="@string/belum_disetujui"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/up_arrow_image" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/process_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/head_label" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/finish_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:visibility="gone"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/head_label" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/confirm_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:visibility="gone"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/head_label" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.core.widget.NestedScrollView>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floating_action_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    app:fabSize="normal"
+                    app:srcCompat="@drawable/ic_action_plus" />
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <ImageView
+            android:id="@+id/empty_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/info_image"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/empty_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/empty_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/leelawdb"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/empty_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/empty_image" />
+
+        <Button
+            android:id="@+id/empty_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/retry"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/empty_text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

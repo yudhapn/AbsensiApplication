@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="user"
+            type="com.pertamina.absensiapplication.model.User" />
+
+        <variable
+            name="fragment"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="134dp"
+        android:layout_margin="4dp"
+        android:background="@drawable/card_all_radius_12"
+        android:clickable="@{!fragment.isEmpty()}"
+        android:elevation="6dp"
+        android:focusable="true"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/employee_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/leelawdb"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setName="@{user.name}"
+            tools:text="Employee Name" />
+
+        <TextView
+            android:id="@+id/employee_position"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/leelawad"
+            android:text="@{user.position}"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/employee_name"
+            app:layout_constraintStart_toStartOf="@+id/employee_name"
+            app:layout_constraintTop_toBottomOf="@+id/employee_name"
+            tools:text="Yudha" />
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginBottom="4dp"
+            android:layout_width="match_parent"
+            app:layout_constraintBottom_toTopOf="@+id/status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/pjs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/status_outline_color_yellow"
+                android:fontFamily="@font/leelawad"
+                android:paddingStart="9dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="9dp"
+                android:paddingBottom="4dp"
+                android:text="@string/pjs"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:visibility="@{user.standIn.size() > 0 ? View.VISIBLE : View.GONE}"
+                />
+            <TextView
+                android:id="@+id/pjs2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/status_outline_color_yellow"
+                android:fontFamily="@font/leelawad"
+                android:paddingStart="9dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="9dp"
+                android:paddingBottom="4dp"
+                android:text="@string/pjs"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:visibility="@{user.standIn.size() == 2 ? View.VISIBLE : View.GONE}"
+               />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/leelawad"
+            android:paddingStart="9dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="4dp"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/employee_position"
+            app:layout_constraintVertical_bias="1.0"
+            app:statusUser="@{user.leave}" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

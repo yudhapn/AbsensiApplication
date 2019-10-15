@@ -1,0 +1,189 @@
+<resources>
+    <string name="app_name">SIK</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="user_image">user_image</string>
+    <string name="enjoy_your_day">Semoga harimu menyenangkan!</string>
+    <string name="sisa_saldo">Sisa Saldo</string>
+    <string name="posisi">Posisi</string>
+    <string name="surat_izin_kamu">Surat Izin Kamu</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="selesai">Selesai</string>
+    <string name="riwayat">Riwayat</string>
+    <string name="june_19_2019">June 19, 2019</string>
+    <string name="diproses">Diproses</string>
+    <string name="konfirmasi">Konfirmasi</string>
+    <string name="image_arrow">Image Arrow</string>
+    <string name="image_arrow_right">Image Arrow Right</string>
+    <string name="pn_dn">PN_DN</string>
+    <string name="pn_ln">PN-LN</string>
+    <string name="sij">SIJ</string>
+    <string name="mutasi">Mutasi</string>
+    <string name="cuti">Cuti</string>
+    <string name="tamu_perusahaan">Tamu Perusahaan</string>
+    <string name="dari_asal">Asal</string>
+    <string name="mengajukan">Mengajukan</string>
+    <string name="tujuan">Tujuan</string>
+    <string name="tanggal_berangkat">Berangkat</string>
+    <string name="tanggal_kembali">Tanggal Kembali</string>
+    <string name="tanggal_masuk">Masuk Kerja</string>
+    <string name="email">Email</string>
+    <string name="kata_sandi">Kata Sandi</string>
+    <string name="berkendaraan">Berkendaraan</string>
+    <string name="biaya">Biaya</string>
+    <string name="biaya_ditanggung_oleh">Biaya Ditanggung Oleh</string>
+    <string name="keterangan">Keterangan</string>
+    <string name="lama_cuti_hari">Lama Cuti (Hari Kerja)</string>
+    <string name="tanggal_masuk_bekerja">Tanggal Masuk Bekerja</string>
+    <string name="keterangan_lainnya">Keterangan Lainnya</string>
+    <string name="tolak">tolak</string>
+    <string name="terima">terima</string>
+    <string name="nama">Nama</string>
+    <string name="surat_keterangan">Surat Keterangan</string>
+    <string name="mengijinkan_menugaskan">Dengan ini menginjinkan / menugaskan</string>
+    <string name="no_pekerja">No. Pekerja</string>
+    <string name="jabatan_golongan">Jabatan / Golongan</string>
+    <string name="eselon">Eselon</string>
+    <string name="untuk_melaksanakan">Untuk Melaksanakan / Mendapatkan / Dipergunakan Perusahaan</string>
+    <string name="terhitung_mulai">Terhitung Mulai</string>
+    <string name="berangkat_kembali">Berangkat / Kembali</string>
+    <string name="kepentingan_keperluan">Kepentingan / Keperluan</string>
+    <string name="negosiasi">negosiasi</string>
+    <string name="ubah_kata_sandi">Ubah Kata Sandi</string>
+    <string name="arrow_image">arrow image</string>
+    <string name="keluar">Keluar</string>
+    <string name="profile_menu">Profil</string>
+    <string name="batal">Batal</string>
+    <string name="belum_disetujui">SIJ Yang Sedang Diajukan</string>
+    <string name="sudah_selesai">SIJ Yang Sudah Selesai</string>
+    <string name="perlu_disetujui">SIJ Yang Perlu Disetujui</string>
+    <string name="info_image">Info Image</string>
+    <string name="retry">Retry</string>
+    <string name="lihat_surat">Lihat Surat</string>
+    <string name="technical_error">Tolong Periksa Koneksi Internet Kamu!</string>
+    <string name="no_result_found">Tidak Ada Surat Izin Yang Ditampilkan!</string>
+    <string name="atur_pengguna">Atur Pengguna</string>
+    <string name="icon_profile">icon profile</string>
+    <string name="ulangi_kata_sandi">Ulangi Kata Sandi</string>
+    <string name="ganti_kata_sandi">Ganti Kata Sandi</string>
+    <string name="member">member</string>
+    <string name="admin">admin</string>
+    <string name="saldo_cuti">Saldo Cuti</string>
+    <string name="atasan">Atasan</string>
+    <string name="operation_head">Operation Head</string>
+    <string name="tambah_pengguna">Tambah Pengguna</string>
+    <string name="nama_input">Nama</string>
+    <string name="lama_izin">Lama Izin</string>
+    <string name="tunggu_atasan">Menunggu persetujuan dari atasan</string>
+    <string name="tunggu_oh">Menunggu persetujuan dari operation head</string>
+    <string name="tolak_atasan">Ditolak oleh atasan</string>
+    <string name="tolak_oh">Ditolak oleh operation head</string>
+    <string name="setuju_terbit">Sudah disetujui dan telah terbit</string>
+    <string name="negosiasi_atasan">Dinegosiasi oleh atasan</string>
+    <string name="negosiasi_oh">Dinegosiasi oleh operation head</string>
+    <string name="ajukan_surat_izin">Ajukan Surat Izin</string>
+    <string name="jenis_pegawai">Jenis Pegawai</string>
+    <string name="supply_amp_distribution_region_v"><![CDATA[Supply & Distribution Region V]]></string>
+    <string name="image_close">Image Close</string>
+    <string name="lihat_dokumen">Lihat Dokumen</string>
+    <string name="suratketerangan">Surat Keterangan</string>
+    <string name="gen_pdf_file">Generating..</string>
+    <string name="detail_user">Detail User</string>
+    <string name="dibatalkan">SIJ kamu dibatalkan</string>
+    <string name="atur_pjs">Atur PJS</string>
+    <string name="karyawan_cuti">Karyawan Yang Sedang Cuti / Dinas</string>
+    <string name="karyawan_pjs">Karyawan Pengganti (PJS)</string>
+    <string name="splash_image">Splash Image</string>
+    <string name="footer">footer</string>
+    <string name="sign_in">Sign in</string>
+    <string name="halo">Halo</string>
+    <string name="header">header</string>
+    <string name="aktifkan_karyawan">Aktifkan Karyawan</string>
+    <string name="atur_profil">Atur Profil</string>
+    <string name="atur_akun">Atur Akun</string>
+    <string name="karyawan">Karyawan</string>
+    <string name="nama_karyawan">Nama Karyawan</string>
+    <string name="buat_sij">Buat SIJ</string>
+    <string name="buat_sij_backdate">Buat SIJ (Back Date)</string>
+    <string name="ubah_profil">Ubah Profil</string>
+    <string name="ubah_akun">Ubah Akun</string>
+    <string name="ubah">Ubah</string>
+    <string name="perusahaan">PT USAHA PATRA LIMA JAVA</string>
+    <string name="data_cuti">DATA PELAKSANAAN CUTI / LIBUR KERJA</string>
+    <string name="beranda">Beranda</string>
+    <string name="status">Status</string>
+    <string name="daftar_pekerja">Daftar Pekerja</string>
+    <string name="organic">Organik</string>
+    <string name="tkjp">TKJP</string>
+    <string name="pjs">PJS</string>
+    <string name="masuk_untuk_membuat_surat_izin">Masuk untuk membuat surat izin</string>
+    <string name="tandai_sedang_cuti">Tandai tidak masuk</string>
+    <string name="cari">Cari</string>
+    <string name="search_hint">Cari Pekerja</string>
+
+    <string-array name="drive">
+        <item>Pribadi</item>
+        <item>Umum</item>
+    </string-array>
+
+    <string-array name="cost">
+        <item>Pribadi</item>
+        <item>Perusahaan</item>
+    </string-array>
+    <string-array name="description">
+        <item>Perkawinan Pekerja</item>
+        <item>Istri Pekerja Melahirkan</item>
+        <item>Meninggal Dunia Istri/Suami/Anak/Menantu/Orang Tua/Mertua</item>
+        <item>Meninggal Dunia Orang Yang Menjadi Tanggungan Dan Tinggal Di Rumah Pekerja</item>
+        <item>Meninggal Dunia Saudara Kandung/Ipar</item>
+        <item>Perkawinan Anak Pekerja</item>
+        <item>Perkawinan Saudara Kandung/Ipar Pekerja</item>
+        <item>Pengkhitanan Anak Pekerja</item>
+        <item>Haid</item>
+        <item>Baptis Anak Pekerja</item>
+        <item>Metatah Gigi/Potong Gigi(Hindu Bali)</item>
+        <item>Wisuda Sarjana Istri/Suami/Anak Pekerja</item>
+        <item>Istri Pekerja Keguguran</item>
+        <item>Aqiqah Anak Pekerja</item>
+        <item>Mengurus Dokumen KTP/Paspor/Visa/Akta Kelahiran Anak/SIM</item>
+        <item>Pekerja Wanita Hamil</item>
+        <item>Pekerja Sakit</item>
+        <item>Pekerja Mengikuti Ujian Terakhir Jenjang Diploma 3 Dan Gelar Sarjana</item>
+        <item>Pekerja Menunaikan Ibadah Haji / Umrah</item>
+    </string-array>
+
+    <string-array name="organicPosition">
+        <item>Operation Head TBBM Malang</item>
+        <item>Spv Receiving, Storage &amp; Distribution</item>
+        <item>Spv Maintanance Planning &amp; Service</item>
+        <item>Spv Sales Services &amp; General Affair</item>
+        <item>Spv Quality &amp; Quantity</item>
+        <item>Jr Spv HSSE</item>
+        <item>Jr Spv Receiving &amp; Storage</item>
+        <item>Jr Spv Distribution</item>
+        <item>Jr Spv Maintanance Service</item>
+    </string-array>
+    <string-array name="tkjpPosition">
+        <item>Nurse (Medical)</item>
+        <item>TBBM/DPPU/DEPOT LPG/BPG/PUG Operations Administration</item>
+        <item>HSE Operation Support</item>
+        <item>Gate Keeper</item>
+        <item>Receiving, Storage and Distribution Operation Support</item>
+        <item>Leader Receiving, Storage and Distribution Operation Support</item>
+        <item>Distribusi - Filling Shed</item>
+        <item>Utilities &amp; Maintenance</item>
+        <item>Technical/Mechanical/Instrumentation Operations Support</item>
+        <item>Security</item>
+        <item>Security Care</item>
+        <item>Driver</item>
+        <item>Patraniaga</item>
+    </string-array>
+    <string-array name="type">
+        <item>Organik</item>
+        <item>TKJP</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="version">V 1.1.2</string>
+</resources>

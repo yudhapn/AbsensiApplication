@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="user_arg"
+            type="com.pertamina.absensiapplication.model.User" />
+
+        <variable
+            name="admin_position"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/profile_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F1EFF1">
+
+            <ScrollView
+                android:id="@+id/root_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F1EFF1"
+                    android:orientation="vertical"
+                    tools:context=".view.EditProFileFragment">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:fontFamily="@font/leelawdb"
+                        android:text="@string/ubah_profil"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                        android:textSize="30sp" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardElevation="10dp"
+                        app:shapeAppearanceOverlay="@style/MaterialCardView.Rounded">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/type_inputlayout"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="10dp"
+                                android:textColorHint="#c1c2c4">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/type_dropdown"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/rounded_corner_toggle2"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/leelawad"
+                                    android:hint="@string/jenis_pegawai" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/name_inputlayout"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:textColorHint="#c1c2c4">
+
+                                <EditText
+                                    android:id="@+id/name_input"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/rounded_corner_toggle2"
+                                    android:fontFamily="@font/leelawad"
+                                    android:hint="@string/nama_input"
+                                    android:inputType="textEmailAddress" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/employee_number_inputlayout"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:textColorHint="#c1c2c4">
+
+                                <EditText
+                                    android:id="@+id/employee_number_input"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/rounded_corner_toggle2"
+                                    android:fontFamily="@font/leelawad"
+                                    android:hint="@string/no_pekerja"
+                                    android:inputType="numberDecimal"
+                                    android:text="@{user_arg.employeeNumber}" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/position_inputlayout"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:textColorHint="#c1c2c4">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/position_dropdown"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/rounded_corner_toggle2"
+                                    android:completionThreshold="1"
+                                    android:fontFamily="@font/leelawad"
+                                    android:hint="@string/posisi"
+                                    android:text="@{user_arg.position}" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:textColorHint="#C1C2C4">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/senior_dropdown"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/rounded_corner_toggle2"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/leelawad"
+                                    android:hint="@string/atasan" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColorHint="#C1C2C4">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/operatoinhead_dropdown"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/rounded_corner_toggle2"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/leelawad"
+                                    android:hint="@string/operation_head" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/balance_inputlayout"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="20dp"
+                                android:textColorHint="#c1c2c4"
+                                android:visibility="@{admin_position.equals(`Operation Head TBBM Malang`) ? View.VISIBLE : View.GONE}">
+
+                                <EditText
+                                    android:id="@+id/balance_input"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/rounded_corner_toggle2"
+                                    android:fontFamily="@font/leelawad"
+                                    android:hint="@string/saldo_cuti"
+                                    android:inputType="numberDecimal"
+                                    android:text="@{user_arg.leaveBalance + ``}" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/submit_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:backgroundTint="#619F1A"
+                        android:fontFamily="@font/leelawad"
+                        android:text="@string/ubah"
+                        android:textStyle="bold"
+                        app:cornerRadius="15dp" />
+                </LinearLayout>
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <ImageView
+            android:id="@+id/empty_list_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/info_image"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/empty_list_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/empty_list_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/leelawdb"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/empty_list_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/empty_list_image" />
+
+        <Button
+            android:id="@+id/empty_list_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/retry"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/empty_list_text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

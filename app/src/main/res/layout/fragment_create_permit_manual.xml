@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/profile_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F1EFF1">
+
+            <ScrollView
+                android:id="@+id/root_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F1EFF1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F1EFF1"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    tools:context=".view.CreatePermitManualFragment">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:fontFamily="@font/leelawdb"
+                        android:text="@string/ajukan_surat_izin"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                        android:textSize="30sp" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/employee_permit_cardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardElevation="10dp"
+                        app:shapeAppearanceOverlay="@style/MaterialCardView.Rounded">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/employee_inputlayout"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:textColorHint="#c1c2c4">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/employee_dropdown"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/rounded_corner_toggle2"
+                                    android:completionThreshold="1"
+                                    android:fontFamily="@font/leelawad"
+                                    android:hint="@string/karyawan" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/not_exist_emp_inputlayout"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:textColorHint="#c1c2c4"
+                                android:visibility="gone" >
+
+                                <EditText
+                                    android:id="@+id/not_exist_emp_input"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/rounded_corner_toggle2"
+                                    android:fontFamily="@font/leelawad"
+                                    android:hint="@string/nama_karyawan"
+                                    android:inputType="textEmailAddress"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/type_permit_cardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardElevation="10dp"
+                        app:shapeAppearanceOverlay="@style/MaterialCardView.Rounded">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp">
+
+                            <CheckBox
+                                android:id="@+id/pn_dn_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pn_dn"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <CheckBox
+                                android:id="@+id/pn_ln_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:text="@string/pn_ln"
+                                app:layout_constraintStart_toEndOf="@+id/pn_dn_checkbox"
+                                app:layout_constraintTop_toTopOf="@+id/pn_dn_checkbox" />
+
+                            <CheckBox
+                                android:id="@+id/sij_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:checked="true"
+                                android:enabled="false"
+                                android:text="@string/sij"
+                                app:layout_constraintStart_toEndOf="@+id/pn_ln_checkbox"
+                                app:layout_constraintTop_toTopOf="@+id/pn_ln_checkbox" />
+
+                            <CheckBox
+                                android:id="@+id/mutasi_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/mutasi"
+                                app:layout_constraintStart_toStartOf="@+id/pn_dn_checkbox"
+                                app:layout_constraintTop_toBottomOf="@+id/pn_ln_checkbox" />
+
+                            <CheckBox
+                                android:id="@+id/cuti_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/cuti"
+                                app:layout_constraintStart_toStartOf="@+id/pn_ln_checkbox"
+                                app:layout_constraintTop_toBottomOf="@+id/pn_ln_checkbox" />
+
+                            <CheckBox
+                                android:id="@+id/tamu_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/tamu_perusahaan"
+                                app:layout_constraintStart_toStartOf="@+id/sij_checkbox"
+                                app:layout_constraintTop_toBottomOf="@+id/pn_ln_checkbox" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/detail_permit_cardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardElevation="10dp"
+                        app:shapeAppearanceOverlay="@style/MaterialCardView.Rounded">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/description_dropdownlayout"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColorHint="#C1C2C4">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/description_dropdown"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/rounded_corner_toggle2"
+                                    android:focusable="false"
+                                    android:hint="@string/keterangan" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/another_inputlayout"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColorHint="#c1c2c4"
+                                android:visibility="gone">
+
+                                <EditText
+                                    android:id="@+id/another_input"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/rounded_corner_toggle2"
+                                    android:hint="@string/keterangan_lainnya"
+                                    android:inputType="text" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/from_inputlayout"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColorHint="#c1c2c4">
+
+                                    <EditText
+                                        android:id="@+id/from_input"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/rounded_corner_toggle2"
+                                        android:hint="@string/dari_asal"
+                                        android:inputType="text" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/to_inputlayout"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_weight="1"
+                                    android:textColorHint="#c1c2c4">
+
+                                    <EditText
+                                        android:id="@+id/to_input"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/rounded_corner_toggle2"
+                                        android:hint="@string/tujuan"
+                                        android:inputType="text" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/durasi_inputlayout"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColorHint="#c1c2c4">
+
+                                    <EditText
+                                        android:id="@+id/durasi_input"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/rounded_corner_toggle2"
+                                        android:hint="@string/lama_cuti_hari"
+                                        android:inputType="numberDecimal" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/date_to_inputlayout"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_weight="1"
+                                    android:textColorHint="#c1c2c4">
+
+                                    <EditText
+                                        android:id="@+id/date_to_input"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/rounded_corner_toggle2"
+                                        android:drawableStart="@drawable/ic_action_date"
+                                        android:drawablePadding="8dp"
+                                        android:focusable="false"
+                                        android:hint="@string/tanggal_berangkat"
+                                        android:inputType="date" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/date_back_inputlayout"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColorHint="#c1c2c4">
+
+                                    <EditText
+                                        android:id="@+id/date_back_input"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/rounded_corner_toggle2"
+                                        android:drawableStart="@drawable/ic_action_date"
+                                        android:drawablePadding="8dp"
+                                        android:focusable="false"
+                                        android:hint="@string/tanggal_kembali"
+                                        android:inputType="date" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/date_in_inputlayout"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_weight="1"
+                                    android:textColorHint="#c1c2c4">
+
+                                    <EditText
+                                        android:id="@+id/date_in_input"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/rounded_corner_toggle2"
+                                        android:drawableStart="@drawable/ic_action_date"
+                                        android:drawablePadding="8dp"
+                                        android:focusable="false"
+                                        android:hint="@string/tanggal_masuk"
+                                        android:inputType="date" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_weight="1"
+                                    android:textColorHint="#C1C2C4">
+
+                                    <AutoCompleteTextView
+                                        android:id="@+id/cost_dropdown"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/rounded_corner_toggle2"
+                                        android:focusable="false"
+                                        android:hint="@string/biaya"
+                                        android:textColorHint="#C1C2C4" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_weight="1"
+                                    android:textColorHint="#C1C2C4">
+
+                                    <AutoCompleteTextView
+                                        android:id="@+id/drive_dropdown"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/rounded_corner_toggle2"
+                                        android:focusable="false"
+                                        android:hint="@string/berkendaraan"
+                                        android:textColorHint="#C1C2C4" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/submit_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:backgroundTint="#619F1A"
+                        android:enabled="false"
+                        android:text="@string/mengajukan"
+                        app:cornerRadius="15dp" />
+                </LinearLayout>
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <ImageView
+            android:id="@+id/empty_list_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/info_image"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/empty_list_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/empty_list_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/leelawdb"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/empty_list_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/empty_list_image" />
+
+        <Button
+            android:id="@+id/empty_list_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/retry"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/empty_list_text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

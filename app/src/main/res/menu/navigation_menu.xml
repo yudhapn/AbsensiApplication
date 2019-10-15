@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@id/status_dest"
+            android:icon="@drawable/userstatus"
+            android:title="@string/status"/>
+    <item
+            android:id="@id/dashboard_dest"
+            android:icon="@drawable/dashboard"
+            android:title="@string/beranda"/>
+    <item
+            android:id="@id/history_dest"
+            android:icon="@drawable/time"
+            android:title="@string/riwayat"/>
+    <item
+            android:id="@id/profile_dest"
+            android:icon="@drawable/user"
+            android:title="@string/profile_menu"/>
+</menu>

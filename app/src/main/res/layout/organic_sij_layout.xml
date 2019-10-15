@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1500px"
+    android:layout_height="2115px"
+    android:background="@android:color/white"
+    android:paddingStart="120px"
+    android:paddingEnd="120px">
+
+    <TextView
+        android:id="@+id/tv_suratketerangan"
+        android:layout_width="350px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="600px"
+        android:layout_marginTop="40px"
+        android:fontFamily="@font/arial"
+        android:padding="6px"
+        android:text="@string/suratketerangan"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="40px"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:contentDescription="@string/user_image"
+        android:layout_width="350px"
+        android:layout_height="90px"
+        android:layout_marginStart="1250px"
+        android:layout_marginTop="40px"
+        android:background="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/tv_nosurat"
+        android:layout_width="570px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_suratketerangan"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="500px"
+        android:fontFamily="@font/arial"
+        android:padding="6px"
+        android:text="Nomor : SIJ-022/F 15434/2019-S8"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_mengijinkan"
+        android:layout_width="675px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nosurat"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="80px"
+        android:fontFamily="@font/arial"
+        android:padding="6px"
+        android:text="Dengan ini mengijinkan / menugaskan :"
+        android:textColor="@android:color/black"
+        android:textSize="30px"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_titikdua"
+        android:layout_width="10px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_mengijinkan"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="450px"
+        android:layout_marginTop="25px"
+        android:fontFamily="@font/arial"
+        android:text=":"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_nama"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_mengijinkan"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25px"
+        android:fontFamily="@font/arial"
+        android:text="Nama"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_value_nama"
+        android:layout_width="565px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_mengijinkan"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="480px"
+        android:layout_marginTop="25px"
+        android:fontFamily="@font/arial"
+        android:text="Rachmatullah Adicahya Nugraha"
+        android:textColor="@android:color/black"
+        android:textSize="30px"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_titikdua1"
+        android:layout_width="10px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nama"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="450px"
+        android:fontFamily="@font/arial"
+        android:text=":"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+
+    <TextView
+        android:id="@+id/tv_nopekerja"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nama"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/arial"
+        android:text="No. Pekerja"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_value_nopekerja"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nama"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="480px"
+        android:fontFamily="@font/arial"
+        android:text="750618"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_titikdua2"
+        android:layout_width="10px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nopekerja"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="450px"
+        android:fontFamily="@font/arial"
+        android:text=":"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_pangkat"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nopekerja"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/arial"
+        android:text="Pangkat/Golongan"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_value_pangkat"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nopekerja"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="480px"
+        android:fontFamily="@font/arial"
+        android:text="PRL 13"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_titikdua3"
+        android:layout_width="10px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_pangkat"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="450px"
+        android:fontFamily="@font/arial"
+        android:text=":"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_jabatan"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_pangkat"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/arial"
+        android:text="Jabatan"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_value_jabatan"
+        android:layout_width="655px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_pangkat"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="480px"
+        android:fontFamily="@font/arial"
+        android:text="Spv. Receiving, Storage and Distribution"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_titikdua4"
+        android:layout_width="10px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_jabatan"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="450px"
+        android:fontFamily="@font/arial"
+        android:text=":"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_eselon"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_jabatan"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/arial"
+        android:text="Eselon"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_value_eselon"
+        android:layout_width="555px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_jabatan"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="480px"
+        android:fontFamily="@font/arial"
+        android:text="Supply and Distribution Region V"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_titikdua5"
+        android:layout_width="10px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_eselon"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="450px"
+        android:layout_marginTop="30px"
+        android:fontFamily="@font/arial"
+        android:text=":"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_melaksanakan"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_eselon"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30px"
+        android:fontFamily="@font/arial"
+        android:text="UNTUK MELAKSANAKAN / "
+        android:textColor="@android:color/black"
+        android:textSize="30px"
+        android:textStyle="bold" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_below="@id/tv_eselon"
+        android:layout_marginStart="550px"
+        android:layout_marginTop="27px"
+        android:fontFamily="@font/arial"
+        android:text="@string/pn_dn" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/check1"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_below="@id/tv_eselon"
+        android:layout_marginStart="755px"
+        android:layout_marginTop="27px"
+        android:fontFamily="@font/arial"
+        android:text="@string/pn_ln" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/check2"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_below="@id/tv_eselon"
+        android:layout_marginStart="960px"
+        android:layout_marginTop="27px"
+        android:fontFamily="@font/arial"
+        android:text="@string/sij" />
+
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/check3"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_below="@id/tv_eselon"
+        android:layout_marginStart="1125px"
+        android:layout_marginTop="27px"
+        android:fontFamily="@font/arial"
+        android:text="@string/mutasi" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/check4"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_below="@id/tv_melaksanakan"
+        android:layout_marginStart="550px"
+        android:layout_marginTop="17px"
+        android:fontFamily="@font/arial"
+        android:text="@string/cuti" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/check5"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_below="@id/tv_melaksanakan"
+        android:layout_marginStart="755px"
+        android:layout_marginTop="17px"
+        android:fontFamily="@font/arial"
+        android:text="@string/tamu_perusahaan" />
+
+    <TextView
+        android:id="@+id/tv_mendapatkan"
+        android:layout_width="525px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_melaksanakan"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/arial"
+        android:text="MENDAPATKAN / DIPERGUNAKAN PERUSAHAAN"
+        android:textColor="@android:color/black"
+        android:textSize="30px"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_asal"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_mendapatkan"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30px"
+        android:fontFamily="@font/arial"
+        android:text="Dari / Asal"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_value_asal"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_mendapatkan"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="480px"
+        android:layout_marginTop="30px"
+        android:fontFamily="@font/arial"
+        android:text="Malang"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+
+    <TextView
+        android:id="@+id/tv_titikdua6"
+        android:layout_width="10px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_mendapatkan"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="450px"
+        android:layout_marginTop="30px"
+        android:fontFamily="@font/arial"
+        android:text=":"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_tujuan"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_asal"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/arial"
+        android:text="Tempat Tujuan"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_value_tujuan"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_asal"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="480px"
+        android:fontFamily="@font/arial"
+        android:text="Ternate"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_titikdua7"
+        android:layout_width="10px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_asal"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="450px"
+        android:fontFamily="@font/arial"
+        android:text=":"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_tanggalmulai"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tujuan"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/arial"
+        android:text="Terhitung mulai tgl"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_value_tanggalmulai"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tujuan"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="480px"
+        android:fontFamily="@font/arial"
+        android:text="15.06.2019"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_titikdua8"
+        android:layout_width="10px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tujuan"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="450px"
+        android:fontFamily="@font/arial"
+        android:text=":"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_tanggalkembali"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tanggalmulai"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/arial"
+        android:text="Berangkat / kembali tanggal"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_value_tanggalkembali"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tanggalmulai"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="480px"
+        android:fontFamily="@font/arial"
+        android:text="SPD Tidak Kembali"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_titikdua9"
+        android:layout_width="10px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tanggalmulai"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="450px"
+        android:fontFamily="@font/arial"
+        android:text=":"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_berkendaraan"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tanggalmasuk"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/arial"
+        android:text="Berkendaraan"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_value_berkendaraan"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tanggalmasuk"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="480px"
+        android:fontFamily="@font/arial"
+        android:text="Umum"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_titikdua11"
+        android:layout_width="10px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tanggalmasuk"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="450px"
+        android:fontFamily="@font/arial"
+        android:text=":"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_biaya"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_berkendaraan"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/arial"
+        android:text="Biaya ditanggung oleh"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_value_biaya"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_berkendaraan"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="480px"
+        android:fontFamily="@font/arial"
+        android:text="Perusahaan"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_titikdua12"
+        android:layout_width="10px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_berkendaraan"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="450px"
+        android:fontFamily="@font/arial"
+        android:text=":"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_tanggalmasuk"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tanggalkembali"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/arial"
+        android:text="Harus masuk bekerja kembali"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_value_tanggalmasuk"
+        android:layout_width="435px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tanggalkembali"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="480px"
+        android:fontFamily="@font/arial"
+        android:text="-"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_titikdua10"
+        android:layout_width="10px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tanggalkembali"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="450px"
+        android:fontFamily="@font/arial"
+        android:text=":"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+
+    <View
+        android:id="@+id/view_horizontal_top"
+        android:layout_width="1650px"
+        android:layout_height="5px"
+        android:layout_below="@+id/tv_biaya"
+        android:layout_marginTop="60px"
+        android:background="@android:color/black" />
+
+    <View
+        android:id="@+id/vertical_start"
+        android:layout_width="5px"
+        android:layout_height="1110px"
+        android:layout_below="@+id/view_horizontal_top"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/black" />
+
+    <View
+        android:id="@+id/vertical_end"
+        android:layout_width="5px"
+        android:layout_height="1110px"
+        android:layout_below="@+id/view_horizontal_top"
+        android:layout_marginStart="1647px"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_keterangan"
+        android:layout_width="400px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_horizontal_top"
+        android:layout_alignStart="@+id/vertical_start"
+        android:layout_marginStart="25px"
+        android:layout_marginTop="4px"
+        android:fontFamily="@font/arial"
+        android:text="Keterangan / Keperluan:"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_value_keterangan"
+        android:layout_width="1500px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_keterangan"
+        android:layout_alignStart="@+id/vertical_start"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="45px"
+        android:layout_marginTop="4px"
+        android:fontFamily="@font/arial"
+        android:text="Ref. Surat Keputusan Unit Manager HC MOR V PT. PERTAMINA (Persero) No. SKMJ - 00001 Tentang Mutasi Jabatan"
+        android:textColor="@android:color/black"
+        android:textSize="30px"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/horizontal_1"
+        android:layout_width="1650px"
+        android:layout_height="5px"
+        android:layout_below="@+id/tv_value_keterangan"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40px"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_noanggota"
+        android:layout_width="60px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_1"
+        android:layout_alignStart="@+id/vertical_start"
+        android:layout_marginStart="39px"
+        android:layout_marginTop="4px"
+        android:fontFamily="@font/arial"
+        android:text="No"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <View
+        android:id="@+id/vertical_1"
+        android:layout_width="5px"
+        android:layout_height="320px"
+        android:layout_below="@+id/horizontal_1"
+        android:layout_marginStart="128px"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_namapengikut"
+        android:layout_width="400px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_1"
+        android:layout_alignStart="@+id/vertical_1"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/arial"
+        android:text="NAMA PENGIKUT/NO.PEK"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <View
+        android:id="@+id/vertical_2"
+        android:layout_width="5px"
+        android:layout_height="320px"
+        android:layout_below="@+id/horizontal_1"
+        android:layout_marginStart="625px"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_golongan"
+        android:layout_width="420px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_1"
+        android:layout_alignStart="@+id/vertical_2"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/arial"
+        android:text="GOL PER"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <View
+        android:id="@+id/vertical_3"
+        android:layout_width="5px"
+        android:layout_height="320px"
+        android:layout_below="@+id/horizontal_1"
+        android:layout_marginStart="875px"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_jabatan2"
+        android:layout_width="420px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_1"
+        android:layout_alignStart="@+id/vertical_3"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/arial"
+        android:text="JABATAN"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <View
+        android:id="@+id/vertical_4"
+        android:layout_width="5px"
+        android:layout_height="320px"
+        android:layout_below="@+id/horizontal_1"
+        android:layout_marginStart="1150px"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_keterangan2"
+        android:layout_width="450px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_1"
+        android:layout_alignStart="@+id/vertical_4"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/arial"
+        android:text="KETERANGAN"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <View
+        android:id="@+id/horizontal_2"
+        android:layout_width="1650px"
+        android:layout_height="5px"
+        android:layout_below="@+id/tv_namapengikut"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10px"
+        android:background="@android:color/black" />
+
+    <View
+        android:id="@+id/horizontal_3"
+        android:layout_width="1650px"
+        android:layout_height="5px"
+        android:layout_below="@+id/horizontal_2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="250px"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_ybs"
+        android:layout_width="60px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_3"
+        android:layout_alignStart="@+id/horizontal_3"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/arial"
+        android:text="Ybs,"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_ybs1"
+        android:layout_width="350px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_ybs"
+        android:layout_alignStart="@+id/horizontal_3"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/arial"
+        android:text="Spv. Receiving, Storage and Distribution"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_ybs2"
+        android:layout_width="340px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_ybs1"
+        android:layout_alignStart="@+id/horizontal_3"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="150px"
+        android:fontFamily="@font/arial"
+        android:text="Rachamatullah Adicahya Nugraha"
+        android:textColor="@android:color/black"
+        android:textSize="30px"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/vertical_5"
+        android:layout_width="5px"
+        android:layout_height="385px"
+        android:layout_below="@+id/horizontal_3"
+        android:layout_marginStart="450px"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_atasanybs"
+        android:layout_width="170px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_3"
+        android:layout_alignStart="@+id/vertical_5"
+        android:layout_marginStart="30px"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/arial"
+        android:text="Atasan Ybs,"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_atasanybs1"
+        android:layout_width="350px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_ybs"
+        android:layout_alignStart="@+id/vertical_5"
+        android:layout_marginStart="30px"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/arial"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_atasanybs2"
+        android:layout_width="340px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_ybs1"
+        android:layout_alignStart="@+id/vertical_5"
+        android:layout_marginStart="30px"
+        android:layout_marginTop="62dp"
+        android:fontFamily="@font/arial"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="30px"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/vertical_6"
+        android:layout_width="5px"
+        android:layout_height="385px"
+        android:layout_below="@+id/horizontal_3"
+        android:layout_marginStart="875px"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_operationhead"
+        android:layout_width="170px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_3"
+        android:layout_alignStart="@+id/vertical_6"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/arial"
+        android:text="Mengetahui,"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_operationhead1"
+        android:layout_width="350px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_ybs"
+        android:layout_alignStart="@+id/vertical_6"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/arial"
+        android:text="Operation Head"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_operationhead2"
+        android:layout_width="350px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_ybs1"
+        android:layout_alignStart="@+id/vertical_6"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="150px"
+        android:fontFamily="@font/arial"
+        android:text="Dani Rusmayandi"
+        android:textColor="@android:color/black"
+        android:textSize="30px"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/vertical_7"
+        android:layout_width="5px"
+        android:layout_height="405px"
+        android:layout_below="@+id/horizontal_3"
+        android:layout_marginStart="1250px"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_tanggal"
+        android:layout_width="350px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_3"
+        android:layout_alignStart="@+id/vertical_7"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/arial"
+        android:text="Malang, 8 July 2019"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <View
+        android:id="@+id/horizontal_4"
+        android:layout_width="1650px"
+        android:layout_height="5px"
+        android:layout_below="@+id/tv_ybs"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="335px"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_panjar"
+        android:layout_width="710px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_4"
+        android:layout_alignStart="@+id/horizontal_4"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/arial"
+        android:text="PANJAR LUMPSUM UANG PERJALANAN DINAS :"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_catatan"
+        android:layout_width="1110px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_panjar"
+        android:layout_alignStart="@+id/horizontal_4"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="55dp"
+        android:fontFamily="@font/arial"
+        android:text="Catattan : Batas akhir pertanggung jawaban panjar dinas 1(satu) minggu setelah kepulangan"
+        android:textColor="@android:color/black"
+        android:textSize="26px" />
+
+    <View
+        android:id="@+id/vertical_8"
+        android:layout_width="5px"
+        android:layout_height="264px"
+        android:layout_below="@+id/horizontal_4"
+        android:layout_marginStart="1250px"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_menyetujui"
+        android:layout_width="350px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_4"
+        android:layout_alignStart="@+id/vertical_8"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/arial"
+        android:text="Menyetujui :"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/tv_keuangan"
+        android:layout_width="350px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_menyetujui"
+        android:layout_alignStart="@+id/vertical_8"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/arial"
+        android:text="Keuangan,"
+        android:textColor="@android:color/black"
+        android:textSize="30px" />
+
+    <View
+        android:id="@+id/horizontal_5"
+        android:layout_width="1650px"
+        android:layout_height="5px"
+        android:layout_below="@+id/tv_catatan"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="33px"
+        android:background="@android:color/black" />
+
+</RelativeLayout>
